@@ -88,6 +88,7 @@ function CatalogContent() {
               <TableHeaderCell>ISBN</TableHeaderCell>
               <TableHeaderCell>Title & Author</TableHeaderCell>
               <TableHeaderCell>Category</TableHeaderCell>
+              <TableHeaderCell>Book Value (₹)</TableHeaderCell>
               <TableHeaderCell>Available / Total</TableHeaderCell>
               <TableHeaderCell>Details</TableHeaderCell>
             </TableRow>
@@ -118,6 +119,9 @@ function CatalogContent() {
                     <p className="text-xs text-slate-500">{book.author}</p>
                   </TableCell>
                   <TableCell><Badge variant="navy">{book.category}</Badge></TableCell>
+                  <TableCell>
+                    <span className="font-bold text-slate-800">₹{book.price || 450}</span>
+                  </TableCell>
                   <TableCell>
                     <span className={book.available_copies > 0 ? "text-emerald-700 font-semibold" : "text-red-600 font-semibold"}>
                       {book.available_copies}

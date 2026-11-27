@@ -14,6 +14,8 @@ class BookBase(BaseModel):
     publication_year: Optional[int] = None
     description: Optional[str] = None
     cover_image_url: Optional[str] = None
+    price: Optional[float] = 450.00
+    replacement_cost: Optional[float] = 600.00
 
 
 class BookCreate(BookBase):
@@ -28,6 +30,8 @@ class BookUpdate(BaseModel):
     publication_year: Optional[int] = None
     description: Optional[str] = None
     cover_image_url: Optional[str] = None
+    price: Optional[float] = None
+    replacement_cost: Optional[float] = None
 
 
 class BookResponse(BookBase):
