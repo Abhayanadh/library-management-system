@@ -28,10 +28,15 @@ class Settings(BaseSettings):
     @property
     def cors_origins(self) -> list[str]:
         """Parse comma-separated allowed CORS origins."""
+        if not self.frontend_origins or self.frontend_origins == "*":
+            return ["*"]
         return [
             origin.strip()
             for origin in self.frontend_origins.split(",")
             if origin.strip()
+        ] + [
+            "http://localhost:3000",
+            "https://library-management-system-abhayanadh.vercel.app",
         ]
 
 

@@ -63,7 +63,7 @@ export default function BackendHealthBadge() {
   return (
     <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-500/15 px-3.5 py-1.5 text-xs font-medium text-amber-200">
       <AlertCircle className="h-3.5 w-3.5 text-amber-300" />
-      API Offline — {state.detail}
+      API Connecting... ({state.detail})
     </span>
   );
 }
