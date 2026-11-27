@@ -11,7 +11,8 @@ export default function BackendHealthBadge() {
 
   useEffect(() => {
     const apiBase =
-      process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+      process.env.NEXT_PUBLIC_API_BASE_URL ||
+      "https://library-management-system-d39s.onrender.com";
 
     let active = true;
     fetch(`${apiBase}/api/v1/health`)
