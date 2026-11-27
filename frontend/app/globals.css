@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vvitu-navy: #0b1f3a;
+  --vvitu-gold: #c89d3c;
+  --vvitu-bg: #ffffff;
+  --vvitu-cream: #f8f7f4;
+}
+
+body {
+  background-color: var(--vvitu-bg);
+  color: #0f172a;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
